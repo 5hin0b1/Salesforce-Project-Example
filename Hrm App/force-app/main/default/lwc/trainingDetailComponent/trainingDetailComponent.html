@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Training Details">
+        <div class="slds-m-around_medium">
+            <lightning-record-edit-form object-api-name="Training__c" onsuccess={handleSuccess}>
+                <lightning-input-field field-name="Id" value={trainingId}></lightning-input-field>
+                <lightning-input-field field-name="Name"></lightning-input-field>
+                <lightning-input-field field-name="Technology__c"></lightning-input-field>
+                <lightning-input-field field-name="Training__c" ></lightning-input-field>
+                <lightning-input-field field-name="Start_Date__c" ></lightning-input-field>
+                <lightning-input-field field-name="End_Date__c" ></lightning-input-field>
+
+                <br>
+                <div class="slds-text-align_center">
+                    <lightning-button style="margin-right: 10px;" label="Save" variant="brand" type="submit"></lightning-button>
+                    <lightning-button style="margin-right: 10px;" label="Back" onclick={handleBack}></lightning-button>
+                </div>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>

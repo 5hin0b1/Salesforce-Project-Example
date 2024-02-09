@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Clients Details">
+        <div class="slds-m-around_medium">
+            <lightning-record-edit-form object-api-name="Client__c" onsuccess={handleSuccess}>
+                <lightning-input-field field-name="Name"></lightning-input-field>
+                <lightning-input-field field-name="Website__c"></lightning-input-field>
+                <lightning-input-field field-name="Street_Address__c"></lightning-input-field>
+                <lightning-input-field field-name="City__c"></lightning-input-field>
+                <lightning-input-field field-name="State__c"></lightning-input-field>
+                <lightning-input-field field-name="Postal_Code__c"></lightning-input-field>
+                <lightning-input-field field-name="Phone__c"></lightning-input-field>
+
+                <br>
+                <div class="slds-text-align_center">
+                    <lightning-button style="margin-right: 10px" label="Save" variant="brand" type="submit"></lightning-button>
+                    <lightning-button style="margin-right: 10px" label="Back" onclick={handleBack}></lightning-button>
+                </div>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>
